@@ -1,1 +1,1 @@
-# meshnu-lambda
+# example-lambda-sqs
