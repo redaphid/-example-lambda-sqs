@@ -1,3 +1,3 @@
-require('coffeescript/register')
-var server = require('meshblu-core-protocol-adapter-http')
-console.log(server)
+import StatusController from './controllers/status-controller'
+
+new StatusController()

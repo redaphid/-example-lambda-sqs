@@ -8,17 +8,10 @@ const serverConfig = {
             },
         ]
     },
-    resolve: {
-        modules: ['node_modules']
-        // aliasFields: ["module"],        
-        // // alias: {
-        // //     './helpers': path.resolve(__dirname, '')
-        // // }
-    },
     target: 'node',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'lib.node.js'
+        filename: 'main'
     }
 };
 
