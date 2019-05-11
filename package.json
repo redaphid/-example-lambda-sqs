@@ -9,7 +9,9 @@
   "repository": "git@github.com:redaphid/meshnu-lambda.git",
   "author": "redaphid <iam@aaronherres.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",

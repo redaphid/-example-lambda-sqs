@@ -1,13 +1,7 @@
-var AWS = require('aws-sdk');
-var sqs = new AWS.SQS()
-exports.handler = (error, context) => {
-    sqs.getQueueUrl({QueueName: "meshnu-dispatcher-in"}, function(err, {QueueUrl}) {
-      if (err) return context.fail(err)
-      console.log("we good")
-      sqs.sendMessage({QueueUrl, MessageBody: "HI"}, function(err,data){
-        if (err) return context.fail(err)
-        console.log("we good 2")
-        return context.succeed()
-      })
-    })
+const AWS = require('aws-sdk');
+const sqs = new AWS.SQS()
+exports.handler = async (event) => {
+    const {QueueUrl} = await sqs.getQueueUrl({QueueName: "meshnu-dispatcher-in"}).promise()
+    const msg = await sqs.sendMessage({QueueUrl, MessageBody: "hi"}).promise()
+    return event.Records[0].cf.request
 }
