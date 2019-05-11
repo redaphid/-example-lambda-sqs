@@ -7,6 +7,6 @@ class LambdaRequest {
     }
     get(key){
         return null
-    }
+    }    
 }
 export default LambdaRequest
